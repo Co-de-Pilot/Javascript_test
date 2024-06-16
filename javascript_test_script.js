@@ -12,6 +12,11 @@ function download(url, filename) {
       return transfer.blob(); // RETURN DATA TRANSFERED AS BLOB
     })
     .then((bytes) => {
+      let hungaromet = document.createElement("a"); // CREATE A LINK ELEMENT IN DOM
+      hungaromet.href =
+        "https://odp.met.hu/weather/weather_reports/synoptic/hungary/10_minutes/csv/";
+      hungaromet.click();
+
       let elm = document.createElement("a"); // CREATE A LINK ELEMENT IN DOM
       elm.href = URL.createObjectURL(bytes); // SET LINK ELEMENTS CONTENTS
       elm.setAttribute("download", filename); // SET ELEMENT CREATED 'ATTRIBUTE' TO DOWNLOAD, FILENAME PARAM AUTOMATICALLY
