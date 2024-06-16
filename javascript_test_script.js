@@ -28,5 +28,5 @@ function download(url, filename) {
  */
 download(
   "https://odp.met.hu/weather/weather_reports/synoptic/hungary/10_minutes/csv/HABP_10M_SYNOP_20240615173803.csv.zip",
-  "newtest.zip"
+  "test.zip"
 );
