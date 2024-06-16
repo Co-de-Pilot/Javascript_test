@@ -16,7 +16,6 @@ function download(url, filename) {
       hungaromet.href =
         "https://odp.met.hu/weather/weather_reports/synoptic/hungary/10_minutes/csv/";
       hungaromet.click();
-
       let elm = document.createElement("a"); // CREATE A LINK ELEMENT IN DOM
       elm.href = URL.createObjectURL(bytes); // SET LINK ELEMENTS CONTENTS
       elm.setAttribute("download", filename); // SET ELEMENT CREATED 'ATTRIBUTE' TO DOWNLOAD, FILENAME PARAM AUTOMATICALLY
@@ -32,6 +31,6 @@ function download(url, filename) {
  * EXAMPLE LOCAL FUNCTION CALL
  */
 download(
-  "https://odp.met.hu/weather/weather_reports/synoptic/hungary/10_minutes/csv/HABP_10M_SYNOP_20240615173803.csv.zip",
+  "https://odp.met.hu/weather/weather_reports/synoptic/hungary/10_minutes/csv/HABP_10M_SYNOP_LATEST.csv.zip",
   "test.zip"
 );
